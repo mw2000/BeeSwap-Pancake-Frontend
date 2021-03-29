@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://beeswap.bz/',
+    href: 'https://bee-swap.herokuapp.com/',
   },
   {
     label: 'Trade',
@@ -24,12 +24,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://beeswap.bz/farms',
+    href: 'https://bee-swap.herokuapp.com/farms',
   },
   {
     label: 'The Hive',
     icon: 'PoolIcon',
-    href: 'https://beeswap.bz/pools',
+    href: 'https://bee-swap.herokuapp.com/pools',
   },
   // {
   //   label: 'Lottery',
@@ -60,28 +60,28 @@ const config: MenuEntry[] = [
   //     },
   //   ],
   // },
-  {
-    label: 'Info',
-    icon: 'InfoIcon',
-    items: [
-      {
-        label: 'Overview',
-        href: 'https://pancakeswap.info',
-      },
-      {
-        label: 'Tokens',
-        href: 'https://pancakeswap.info/tokens',
-      },
-      {
-        label: 'Pairs',
-        href: 'https://pancakeswap.info/pairs',
-      },
-      {
-        label: 'Accounts',
-        href: 'https://pancakeswap.info/accounts',
-      },
-    ],
-  },
+  // {
+  //   label: 'Info',
+  //   icon: 'InfoIcon',
+  //   items: [
+  //     {
+  //       label: 'Overview',
+  //       href: 'https://pancakeswap.info',
+  //     },
+  //     {
+  //       label: 'Tokens',
+  //       href: 'https://pancakeswap.info/tokens',
+  //     },
+  //     {
+  //       label: 'Pairs',
+  //       href: 'https://pancakeswap.info/pairs',
+  //     },
+  //     {
+  //       label: 'Accounts',
+  //       href: 'https://pancakeswap.info/accounts',
+  //     },
+  //   ],
+  // },
   // {
   //   label: 'IFO',
   //   icon: 'IfoIcon',
