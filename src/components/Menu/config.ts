@@ -52,7 +52,7 @@ const config: MenuEntry[] = [
   //     },
   //     {
   //       label: 'Task Center',
-  //       href: 'https://pancakeswap.finance/profile/tasks',
+  //       href: '/tasks',
   //     },
   //     {
   //       label: 'Your Profile',
