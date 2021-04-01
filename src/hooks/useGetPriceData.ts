@@ -1,4 +1,8 @@
 import { useEffect, useState } from 'react'
+import { BigNumber } from '@ethersproject/bignumber'
+import { useMulticallContract } from './useContract'
+import ERC20_INTERFACE from '../constants/abis/erc20'
+import priceContracts from '../constants/honeyPriceContracts'
 
 type ApiResponse = {
   prices: {
@@ -14,22 +18,34 @@ type ApiResponse = {
 const api = 'https://api.pancakeswap.com/api/v1/price'
 
 const useGetPriceData = () => {
-  const [data, setData] = useState<ApiResponse | null>(null)
+  const [data, setData] = useState<number>(0)
+
+  const multicallContract = useMulticallContract();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(api)
-        const res: ApiResponse = await response.json()
+        if(multicallContract){
+          const {cakeAddress, busdAddress, lpAddress} = priceContracts;
+          const calls = [
+            [cakeAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
+            [busdAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
+          ];
 
-        setData(res)
+          const [resultsBlockNumber, result] = await multicallContract.aggregate(calls);
+          const [cakeAmount, busdAmount] = result.map(r=>ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
+          const cake = new BigNumber(cakeAmount);
+          const busd = new BigNumber(busdAmount);
+          const cakePrice = busd.div(cake).toNumber();
+          setData(cakePrice)
+        }
       } catch (error) {
         console.error('Unable to fetch price data:', error)
       }
     }
 
     fetchData()
-  }, [setData])
+  }, [multicallContract])
 
   return data
 }
