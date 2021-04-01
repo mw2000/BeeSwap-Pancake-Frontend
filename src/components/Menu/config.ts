@@ -29,7 +29,7 @@ const config: MenuEntry[] = [
   {
     label: 'The Hive',
     icon: 'PoolIcon',
-    href: 'https://bee-swap.herokuapp.com/pools',
+    href: 'https://bee-swap.herokuapp.com/hive',
   },
   // {
   //   label: 'Lottery',
