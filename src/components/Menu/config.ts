@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://bee-swap.herokuapp.com/',
+    href: 'https://beeswap.bz/',
   },
   {
     label: 'Trade',
@@ -24,12 +24,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://bee-swap.herokuapp.com/farms',
+    href: 'https://beeswap.bz/farms',
   },
   {
     label: 'The Hive',
     icon: 'PoolIcon',
-    href: 'https://bee-swap.herokuapp.com/hive',
+    href: 'https://beeswap.bz/hive',
   },
   // {
   //   label: 'Lottery',
