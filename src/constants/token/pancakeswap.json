@@ -16,7 +16,7 @@
       "address": "0x7c63F96fEAFACD84e75a594C00faC3693386FBf0",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://exchange.beeswap.finance/images/coins/0x7c63F96fEAFACD84e75a594C00faC3693386FBf0"
+      "logoURI": "https://exchange.beeswap.bz/images/coins/0x7c63F96fEAFACD84e75a594C00faC3693386FBf0"
     },
     {
       "name": "Honey",
@@ -24,7 +24,7 @@
       "address": "0x1BD7dF20aE5e884C61b7017FaC557e82cCA6baEe",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://exchange.beeswap.finance/images/coins/0x1BD7dF20aE5e884C61b7017FaC557e82cCA6baEe"
+      "logoURI": "https://exchange.beeswap.bz/images/coins/0x1BD7dF20aE5e884C61b7017FaC557e82cCA6baEe"
     },
     {
       "name": "WBNB Token",
